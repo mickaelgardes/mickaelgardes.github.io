@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mickaël Gardes - Ingénieur Data & IA</title>
+    <meta name="description"
+        content="Portfolio de Mickaël Gardes, Élève-Ingénieur @ Mines Saint-Étienne. Data, IA, Cryptographie et Finance.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="profile-container">
+            <img src="moi.jpeg" alt="Mickaël Gardes" class="profile-img">
+            <h2 class="profile-name">Mickaël Gardes</h2>
+            <p class="profile-role">Ingénieur Data & IA</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Parcours</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projets</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Expériences</a></li>
+                <li><a href="#mobility" class="nav-link"><i class="fas fa-plane"></i> Mobilité</a></li>
+                <li><a href="#interests" class="nav-link"><i class="fas fa-heart"></i> Intérêts</a></li>
+                <li><a href="#cv" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mickael-gardes-209b38322/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+            </div>
+            <p class="copyright">&copy; 2026</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <canvas id="hero-canvas"></canvas>
+                <div class="container hero-content fade-in">
+                    <p class="greeting">Bonjour, je suis</p>
+                    <h1>Mickaël Gardes</h1>
+                    <h2 class="role">Élève-Ingénieur @ Mines Saint-Étienne | Data & IA</h2>
+                    <h3 class="subtitle">Transformer la donnée brute en intelligence stratégique.</h3>
+
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Basé à Strasbourg & Aix-en-Provence
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    </div>
+                </div>
+                <div class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </section>
+
+            <!-- Education Section (Timeline) -->
+            <section id="education" class="section">
+                <div class="container">
+                    <h2 class="section-title fade-in">Mon Parcours <span class="line"></span></h2>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024 - Présent</div>
+                            <div class="timeline-content">
+                                <h3>Mines Saint-Étienne (Cycle ISMIN)</h3>
+                                <p class="timeline-role">Ingénierie des Systèmes Microélectroniques et Informatiques</p>
+                                <p>Spécialisation en Data Science, Intelligence Artificielle et Systèmes Embarqués.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2022 - 2024</div>
+                            <div class="timeline-content">
+                                <h3>CPGE PSI</h3>
+                                <p class="timeline-role">Classes Préparatoires aux Grandes Écoles</p>
+                                <p>Formation intensive en Mathématiques, Physique et Sciences de l'Ingénieur. Rigueur,
+                                    abstraction et capacité de travail.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2019 - 2022</div>
+                            <div class="timeline-content">
+                                <h3>Lycée Fustel de Coulanges (Strasbourg)</h3>
+                                <p class="timeline-role">Baccalauréat Général</p>
+                                <p>Spécialités Mathématiques & Physique-Chimie. Option Mathématiques Expertes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title fade-in">Projets Techniques <span class="line"></span></h2>
+                    <div class="grid-3">
+                        <!-- Project 1 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card">
+                                    <div class="card-header">
+                                        <i class="fas fa-microchip icon-bg"></i>
+                                        <h3>Implémentation ASCON 128</h3>
+                                    </div>
+                                    <div class="tags">
+                                        <span class="tag">SystemVerilog</span>
+                                        <span class="tag">Cryptographie</span>
+                                        <span class="tag">Hardware</span>
+                                    </div>
+                                    <p>Implémentation matérielle de l'algorithme de chiffrement ASCON 128 (standard NIST
+                                        Lightweight Crypto). Architecture modulaire, machine à états (FSM) optimisée et
+                                        validation complète sous ModelSim.</p>
+                                </div>
+                                <div class="flip-card-back project-back">
+                                    <h3>Implémentation ASCON 128</h3>
+                                    <p>Consulter le code source et la documentation sur GitHub.</p>
+                                    <a href="https://github.com/Pascalito-ai/Ascon128-AEAD" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-light-outline"><i
+                                            class="fab fa-github"></i> Voir le code sur
+                                        GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-line icon-bg"></i>
+                                        <h3>Diagnostic IA & Séries Temporelles</h3>
+                                    </div>
+                                    <div class="tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Machine Learning</span>
+                                    </div>
+                                    <p>Développement d'un pipeline complet de traitement de données : nettoyage, feature
+                                        engineering et création de modèles de classification pour la détection
+                                        automatisée
+                                        d'anomalies sur des signaux.</p>
+                                </div>
+                                <div class="flip-card-back project-back">
+                                    <h3>Diagnostic IA</h3>
+                                    <p>Explorez le code python sur GitHub et l'analyse de données.</p>
+                                    <a href="https://github.com/Pascalito-ai/ECG-Arrhythmia-Detection" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-light-outline"><i
+                                            class="fab fa-github"></i> Voir le code
+                                        sur
+                                        GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card">
+                                    <div class="card-header">
+                                        <i class="fas fa-wallet icon-bg"></i>
+                                        <h3>Gestion Financière Multi-devises</h3>
+                                    </div>
+                                    <div class="tags">
+                                        <span class="tag">C++</span>
+                                        <span class="tag">Architecture Objet</span>
+                                    </div>
+                                    <p>Conception d'une application robuste pour la gestion de transactions bancaires
+                                        complexes. Modélisation fine des flux monétaires et gestion rigoureuse de la
+                                        mémoire
+                                        et des structures de données.</p>
+                                </div>
+                                <div class="flip-card-back project-back">
+                                    <h3>Gestion Financière</h3>
+                                    <p>Accédez à l'architecture du projet et au code source.</p>
+                                    <a href="https://github.com/Pascalito-ai/Cpp-Banking-System" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-light-outline"><i
+                                            class="fab fa-github"></i> Voir le code
+                                        sur
+                                        GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience & Engagement Section -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <h2 class="section-title fade-in">Expériences & Engagement <span class="line"></span></h2>
+                    <div class="grid-2">
+                        <!-- Exp 1 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card exp-card">
+                                    <div class="exp-header">
+                                        <h3>Junior Mines Provence (JMP)</h3>
+                                        <span class="date">Responsable Suivi d'Étude</span>
+                                    </div>
+                                    <p>Interface privilégiée avec les clients. Gestion de la relation commerciale,
+                                        prospection active et assurance qualité des livrables techniques. Développement
+                                        de
+                                        compétences en gestion de projet.</p>
+                                </div>
+                                <div class="flip-card-back exp-back"
+                                    style="background-image: url('jmp.jpeg'); background-size: cover; background-position: center;">
+                                    <div class="overlay">
+                                        <h3>Junior Mines Provence</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Exp 2 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card exp-card">
+                                    <div class="exp-header">
+                                        <h3>Forum Étudiant Ingénieur (FEI)</h3>
+                                        <span class="date">Resp. Relations Entreprises</span>
+                                    </div>
+                                    <p>Organisation majeure rassemblant 50 entreprises et 500 étudiants. Négociation
+                                        contractuelle, logistique partenariale et management d'équipe.</p>
+                                </div>
+                                <div class="flip-card-back exp-back" style="background-image: url('fei.jpeg');">
+                                    <div class="overlay">
+                                        <h3>Forum Étudiant Ingénieur</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Exp 3 (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card exp-card">
+                                    <div class="exp-header">
+                                        <h3>Stage Orano</h3>
+                                        <span class="date">Janvier 2025</span>
+                                    </div>
+                                    <p>Analyse approfondie de processus industriels et conception de bases de données
+                                        relationnelles pour l'optimisation des flux d'information.</p>
+                                </div>
+                                <div class="flip-card-back exp-back"
+                                    style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                                    <div class="overlay">
+                                        <h3>Orano</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sport (Flip Card) -->
+                        <div class="flip-card fade-in">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card exp-card">
+                                    <div class="exp-header">
+                                        <h3>Compétition Sportive</h3>
+                                        <span class="date">Football & Tennis</span>
+                                    </div>
+                                    <p>Pratique en compétition développant la persévérance, la gestion du stress et la
+                                        cohésion d'équipe. La performance se construit dans la durée.</p>
+                                </div>
+                                <div class="flip-card-back exp-back" style="background-image: url('foot.jpeg');">
+                                    <div class="overlay" style="background-color: rgba(10, 25, 47, 0.45);">
+                                        <h3>Football & Tennis</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobility Section -->
+            <section id="mobility" class="section mobility-section">
+                <div class="container fade-in text-center">
+                    <div class="mobility-badge">
+                        <i class="fas fa-plane-departure"></i> Prochaine Destination
+                    </div>
+                    <h2>Karlsruhe Institute of Technology (KIT)</h2>
+                    <h3>Semestre d'échange académique en Allemagne</h3>
+                    <p>Spécialisation à venir en Management et Finance.</p>
+                </div>
+            </section>
+
+            <!-- Interests Section -->
+            <section id="interests" class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title fade-in">Intérêts & Ouverture <span class="line"></span></h2>
+                    <div class="grid-2">
+                        <div class="interest-block fade-in"
+                            style="background: linear-gradient(rgba(10, 25, 47, 0.70), rgba(10, 25, 47, 0.70)), url('carte.jpeg'); background-size: cover; background-position: center; color: #ffffff; border: none;">
+                            <i class="fas fa-globe-americas interest-icon" style="color: #60a5fa;"></i>
+                            <h3 style="color: #ffffff;">Ouverture Internationale</h3>
+                            <p style="color: #e2e8f0;">Voyages en immersion au <strong>Japon</strong> (3 semaines) et au
+                                <strong>Costa Rica</strong>
+                                (2 semaines). Curiosité pour les cultures étrangères et forte adaptabilité.
+                            </p>
+                        </div>
+                        <div class="interest-block fade-in"
+                            style="background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('isi.jpeg'); background-size: cover; background-position: center; color: #ffffff; border: none;">
+                            <i class="fas fa-users-cog interest-icon" style="color: #60a5fa;"></i>
+                            <h3 style="color: #ffffff;">Formateur Informatique Bénévole</h3>
+                            <p style="color: #e2e8f0;"><strong>Mairie de Gardanne - Projet ISI</strong> (Mars - Juin
+                                2025)</p>
+                            <p style="text-align: left; margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
+                                Accompagnement de seniors vers
+                                l'autonomie numérique. Animation d'ateliers sur mesure (bureautique, internet,
+                                sécurité).
+                                Engagement communautaire fort.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CV Section -->
+            <section id="cv" class="section cv-section">
+                <div class="container text-center fade-in">
+                    <h2>Mon Curriculum Vitae</h2>
+                    <p>Pour avoir une vision synthétique de mon profil, téléchargez mon CV au format PDF.</p>
+                    <a href="cv.pdf" class="btn btn-primary btn-large download-cv" download="CV_Mickael_Gardes"
+                        target="_blank">
+                        <i class="fas fa-download"></i> Télécharger mon CV (PDF)
+                    </a>
+                </div>
+            </section>
+
+            <!-- Footer / Contact -->
+            <footer id="contact">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-info">
+                            <h3>Mickaël Gardes</h3>
+                            <p>Élève-Ingénieur Data & IA</p>
+                            <a href="mailto:mickael.gardes@etu.emse.fr"
+                                class="email-link">mickael.gardes@etu.emse.fr</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
