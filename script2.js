@@ -63,3 +63,52 @@
         if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') openCurtain();
     });
 })();
+
+/* =========================================================
+   Clignotement chaotique du prénom (par salves aléatoires)
+   ========================================================= */
+(function () {
+    'use strict';
+
+    var title = document.querySelector('.hero-content h1');
+    if (!title) return;
+
+    if (window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Réglages : plus les valeurs sont petites, plus ça clignote souvent
+    var PAUSE_MIN = 300;        // pause minimale entre deux salves (ms)
+    var PAUSE_MAX = 2200;       // pause maximale entre deux salves (ms)
+    var FLASHES_MIN = 3;        // nombre minimal de scintillements par salve
+    var FLASHES_MAX = 9;        // nombre maximal de scintillements par salve
+    var BLACKOUT_CHANCE = 0.12; // probabilité d'une longue extinction
+
+    var GLOW_ON = '0 0 18px rgba(200, 0, 0, 0.7), 0 0 50px rgba(160, 0, 0, 0.45)';
+    var GLOW_OFF = '0 0 4px rgba(200, 0, 0, 0.3)';
+
+    function rand(min, max) { return min + Math.random() * (max - min); }
+
+    function setLevel(level) {
+        title.style.opacity = level;
+        title.style.textShadow = level > 0.8 ? GLOW_ON : GLOW_OFF;
+    }
+
+    function burst() {
+        var flashes = Math.floor(rand(FLASHES_MIN, FLASHES_MAX + 1));
+        var i = 0;
+
+        (function step() {
+            if (i >= flashes) {
+                setLevel(1);
+                setTimeout(burst, rand(PAUSE_MIN, PAUSE_MAX));
+                return;
+            }
+            var blackout = Math.random() < BLACKOUT_CHANCE;
+            setLevel(blackout ? 0.05 : (i % 2 === 0 ? rand(0.1, 0.6) : rand(0.7, 1)));
+            i++;
+            setTimeout(step, blackout ? rand(150, 380) : rand(25, 110));
+        })();
+    }
+
+    setTimeout(burst, rand(PAUSE_MIN, PAUSE_MAX));
+})();

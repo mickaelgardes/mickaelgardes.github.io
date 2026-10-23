@@ -171,43 +171,12 @@ html.lodge-hide-hero .hero-content { opacity: 0 !important; transition: none !im
     font-size: clamp(3rem, 8vw, 6rem);
     color: var(--lodge-cream) !important;
     text-shadow: 0 0 18px rgba(200, 0, 0, 0.7), 0 0 50px rgba(160, 0, 0, 0.45);
-    /* Deux animations de durées différentes : leur combinaison paraît aléatoire */
-    animation: lodge-flicker 2.7s steps(1, end) infinite, lodge-glow 1.9s ease-in-out infinite;
+    /* le clignotement est géré en JS (lynch.js) pour être aléatoire */
 }
 
 .hero-content .role { color: var(--lodge-cream) !important; font-style: italic; font-weight: 500; }
 .hero-content .subtitle { color: #a39a86 !important; font-weight: 400; }
 .hero-content .location { color: var(--lodge-red) !important; }
-
-/* Clignotement saccadé et irrégulier (opacité + petit décalage) */
-@keyframes lodge-flicker {
-    0%, 3%, 6%, 9%, 14%, 17%, 23%, 27%, 31%, 40%, 44%, 52%, 58%, 63%, 70%, 78%, 85%, 100% {
-        opacity: 1; transform: translateX(0);
-    }
-    4%  { opacity: 0.15; transform: translateX(-2px); }
-    7%  { opacity: 0.7; }
-    8%  { opacity: 0.1; transform: translateX(2px); }
-    15% { opacity: 0.4; }
-    24% { opacity: 0; transform: translateX(3px); }
-    25% { opacity: 0.8; }
-    28% { opacity: 0.2; transform: translateX(-1px); }
-    41% { opacity: 0.5; }
-    42% { opacity: 0.05; transform: translateX(-3px); }
-    53% { opacity: 0.6; }
-    64% { opacity: 0.1; transform: translateX(2px); }
-    65% { opacity: 0.9; }
-    71% { opacity: 0.3; }
-    79% { opacity: 0; }
-    80% { opacity: 0.7; transform: translateX(-2px); }
-}
-
-/* Variation de l'intensité du halo rouge */
-@keyframes lodge-glow {
-    0%, 100% { text-shadow: 0 0 18px rgba(200, 0, 0, 0.7), 0 0 50px rgba(160, 0, 0, 0.45); }
-    20% { text-shadow: 0 0 6px rgba(200, 0, 0, 0.4), 0 0 14px rgba(160, 0, 0, 0.2); }
-    45% { text-shadow: 0 0 28px rgba(255, 20, 20, 0.9), 0 0 70px rgba(200, 0, 0, 0.6); }
-    70% { text-shadow: 0 0 10px rgba(200, 0, 0, 0.5), 0 0 24px rgba(160, 0, 0, 0.3); }
-}
 
 .scroll-down { color: var(--lodge-red) !important; z-index: 4; }
 
@@ -244,13 +213,14 @@ html.lodge-hide-hero .hero-content { opacity: 0 !important; transition: none !im
 .timeline-dot { background: var(--lodge-red) !important; box-shadow: 0 0 12px var(--lodge-red); border-color: #000 !important; }
 .timeline-date { color: #ff3b3b !important; letter-spacing: 0.1em; }
 .timeline-role { color: #a39a86 !important; font-style: italic; }
-/* La carte (bleue à l'origine) devient noire à bord rouge ; le rectangle intérieur disparaît */
+/* La carte (ex-bleue) devient noire avec un liseré rouge */
 .timeline-item {
     background: #0b0b0b !important;
     border: 1px solid #4d0000 !important;
     border-radius: 2px !important;
     box-shadow: 0 0 22px rgba(120, 0, 0, 0.2) !important;
 }
+/* Plus de rectangle noir à l'intérieur */
 .timeline-content {
     background: transparent !important;
     border: none !important;
@@ -259,7 +229,7 @@ html.lodge-hide-hero .hero-content { opacity: 0 !important; transition: none !im
 .timeline-content p { color: var(--lodge-text) !important; }
 
 /* Ligne verticale de la timeline en rouge sombre */
-.timeline { border-color: #4a0000 !important; }
+.timeline { border-left-color: #4a0000 !important; }
 .timeline::before { background: #4a0000 !important; }
 
 /* ---------- Cartes & flip cards ---------- */
@@ -294,8 +264,9 @@ html.lodge-hide-hero .hero-content { opacity: 0 !important; transition: none !im
     border-radius: 2px !important;
 }
 
-/* Dos des cartes expérience : on garde le rendu d'origine (pas de filtre rouge) */
+/* Dos des cartes expérience : photo au naturel, léger voile noir pour lire le titre */
 .exp-back { border-radius: 2px !important; }
+.exp-back .overlay { background: rgba(0, 0, 0, 0.35) !important; }
 
 /* ---------- Mobilité ---------- */
 .mobility-section {
